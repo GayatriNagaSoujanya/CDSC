@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Widget</title>
+  <!-- Include Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Chatbot Floating Icon -->
+  <div id="chatbot-icon" class="fixed bottom-5 right-5 bg-teal-500 w-16 h-16 rounded-full shadow-lg cursor-pointer overflow-hidden flex items-center justify-center">
+    <!-- Replace the static image with the GIF -->
+    <img src="Bot Icon.gif" alt="Chatbot Icon" class="w-full h-full object-cover">
+  </div>
+
+  <!-- Chatbot Window -->
+  <div id="chatbot-window" class="fixed bottom-20 right-5 w-80 bg-white shadow-lg rounded-lg hidden">
+    <div class="flex items-center justify-between p-4 bg-teal-500 text-white rounded-t-lg">
+      <h2 class="text-lg font-bold">Chatbot</h2>
+      <button id="close-chatbot" class="text-xl font-bold">&times;</button>
+    </div>
+    <div class="p-4 h-64 overflow-y-auto">
+      <div class="text-sm text-gray-500">Ask me anything!</div>
+      <div id="chat-content" class="mt-2">
+        <!-- Chat messages will appear here -->
+      </div>
+    </div>
+    <div class="p-2 border-t">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Type your message..."
+        class="w-full border rounded p-2 text-sm"
+      />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
